@@ -1,27 +1,34 @@
 $green: rgb(17, 184, 150);
+$darkgreen: rgb(11, 145, 118);
+$lightgreen: rgb(78, 211, 184);
 $grey: rgb(245, 246, 247);
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    box-sizing: border-box;
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex;
     flex-direction: column;
 }
 
 .container {
+    @include flex;
     max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-top: 5%;
 }
 
@@ -38,25 +45,36 @@ h3 {
     font-size: 14px;
 }
 
-button {
-    padding: 15px 30px;
-    color: white;
-    background: $green;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 6px;
-    margin-top: 20px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    font-family: 'Varela Round', sans-serif;
-}
-
 p {
     font-size: 14px;
     line-height: 24px;
     text-transform: none;
     letter-spacing: 1px;
+}
+
+button {
+    height: 48px;
+    padding: 15px 30px;
+    color: white;
+    background: $green;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+    transition: 0.15s;
+    &:hover {
+        color: darkslategray;
+        background: $lightgreen;
+    }
+}
+
+.get-started, .gallery, .download {
+    background: $grey;
 }
 
 .hero {
@@ -77,37 +95,40 @@ p {
                     position: relative;
                     top: 30px;
                     font-weight: 700;
+                    transition: 0.1s;
+                    &:hover {
+                        color: $green;
+                    }
                 }
             }
         }
     }
     div:first-of-type {
-        display: flex;
+        @include flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         h1 {
             margin-bottom: 12px;
         }
         p {
             margin-top: 0;
-            font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+            font-size: 18px;
         }
     }
     div:last-of-type {
+        @include flex;
         padding-bottom: 25px;
-        display: flex;
-        width: 120px;
-        justify-content: space-between;
+        width: 200px;
         i {
+            transition: 0.2s;
             font-size: 30px;
+            position: relative;
+            &:hover {
+                color: $lightgreen;
+                bottom: 2px;
+            }
         }
     }
-}
-
-.get-started {
-    background: $grey;
 }
 
 .design {
@@ -133,6 +154,7 @@ p {
     i {
         font-weight: 700;
         font-size: 26px;
+        cursor: pointer;
         &:last-of-type {
             padding-left: 10px;
         }
@@ -140,7 +162,6 @@ p {
 }
 
 .gallery {
-    background: $grey;
     .container {
         padding-bottom: 8%;
         flex-direction: column;
@@ -150,14 +171,11 @@ p {
             justify-content: flex-end;
         }
         .photos {
-            display: flex;
+            @include flex;
             flex-direction: row;
-            justify-content: space-between;
             div:first-of-type {
-                display: flex;
+                @include flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 max-width: 24%;
                 padding-right: 40px;
                 text-align: center;
@@ -176,20 +194,34 @@ p {
 }
 
 .subscribe {
+    @include flex;
+    justify-content: center;
     height: 100vh;
     background: url('https://images.unsplash.com/photo-1516839570361-6fa29f2e781e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b113949008add689cda6082faa264e3&auto=format&fit=crop&w=750&q=80') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    input {
-        @extend button;
-        color: black;
-        background: white;
+    .input {
+        position: relative;
+        input {
+            @extend button;
+            color: black;
+            background: white;
+            width: 350px;
+            cursor: initial;
+        }
+        i {
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            padding: 0 7px;
+            line-height: 48px;
+            font-size: 30px;
+            color: white;
+            background: $green;
+            border-radius: 0 4px 4px 0;
+        }
     }
 }
 
 .download {
-    background: $grey;
     .container {
         padding-bottom: 8%;
         max-width: 800px;
@@ -210,7 +242,26 @@ p {
             width: 100%;
             button {
                 margin: 20px;
-                width: 200px;
+                width: 250px;
+                text-align: left;
+                position: relative;
+                i {
+                    display: block;
+                    height: 48px;
+                    width: 50px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 30px;
+                    background: $darkgreen;
+                    border-radius: 0 4px 4px 0;
+                    &:before {
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                    }
+
+                }
             }
         }
     }
@@ -231,6 +282,9 @@ footer {
             }
             &:last-of-type {
             border: none;
+            }
+            &:hover {
+                color: $darkgreen;
             }
         }
     }
