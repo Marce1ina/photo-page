@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+}
+
+section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 5%;
+}
+
+h1 {
+  color: white;
+  font-size: 38px;
+}
+
+h2 {
+  color: #11b896;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+button, .subscribe input {
+  padding: 15px 30px;
+  color: white;
+  background: #11b896;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-family: 'Varela Round', sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.hero {
+  background: url("https://images.pexels.com/photos/32237/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb") center/cover;
+  color: white;
+  height: 100vh;
+}
+
+.hero nav {
+  max-width: 800px;
+}
+
+.hero nav ul {
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.hero nav ul li {
+  padding: 3vh 40px;
+}
+
+.hero nav ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: 30px;
+  font-weight: 700;
+}
+
+.hero div:first-of-type {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.hero div:first-of-type h1 {
+  margin-bottom: 12px;
+}
+
+.hero div:first-of-type p {
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero div:last-of-type {
+  padding-bottom: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.hero div:last-of-type i {
+  font-size: 30px;
+}
+
+.get-started {
+  background: #f5f6f7;
+}
+
+.design img {
+  padding-right: 30%;
+}
+
+.design .text button, .design .text .subscribe input, .subscribe .design .text input {
+  margin-bottom: 20px;
+}
+
+.design .text .slide-nav p {
+  font-size: 12px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.slide-nav i {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.slide-nav i:last-of-type {
+  padding-left: 10px;
+}
+
+.gallery {
+  background: #f5f6f7;
+}
+
+.gallery .container {
+  padding-bottom: 8%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.gallery .container .slide-nav {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.gallery .container .photos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.gallery .container .photos div:first-of-type {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 24%;
+  padding-right: 40px;
+  text-align: center;
+}
+
+.gallery .container .photos div:first-of-type p {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.gallery .container .photos .single-photo {
+  padding-left: 30px;
+  overflow: hidden;
+  height: 219px;
+}
+
+.subscribe {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1516839570361-6fa29f2e781e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b113949008add689cda6082faa264e3&auto=format&fit=crop&w=750&q=80") center/cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.subscribe input {
+  color: black;
+  background: white;
+}
+
+.download {
+  background: #f5f6f7;
+}
+
+.download .container {
+  padding-bottom: 8%;
+  max-width: 800px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.download .container h2 {
+  color: black;
+  margin-bottom: 18px;
+}
+
+.download .container p {
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.download .container div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+}
+
+.download .container div button, .download .container div .subscribe input, .subscribe .download .container div input {
+  margin: 20px;
+  width: 200px;
+}
+
+footer .container {
+  padding: 20px 0;
+}
+
+footer .container p {
+  font-weight: 700;
+}
+
+footer .container h3 {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #11b896;
+}
+
+footer .container h3:first-of-type {
+  padding-left: 0;
+}
+
+footer .container h3:last-of-type {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
